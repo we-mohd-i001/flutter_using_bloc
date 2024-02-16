@@ -94,23 +94,23 @@ class HomeScreen extends StatelessWidget {
                           }
                         }
                     ),
-                    // Row(
-                    //   crossAxisAlignment: CrossAxisAlignment.center,
-                    //   mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    //   children: <Widget>[
-                    //     FloatingActionButton(
-                    //       tooltip: 'Increment',
-                    //       child: const Icon(Icons.add),
-                    //       onPressed: () => context.read<CounterCubit>().increment(),
-                    //     ),
-                    //     const SizedBox(height: 4),
-                    //     FloatingActionButton(
-                    //       tooltip: 'Decrement',
-                    //       child: const Icon(Icons.remove),
-                    //       onPressed: () => context.read<CounterCubit>().decrement(),
-                    //     ),
-                    //   ],
-                    // ),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: <Widget>[
+                        FloatingActionButton(
+                          tooltip: 'Increment',
+                          child: const Icon(Icons.add),
+                          onPressed: () => context.read<CounterCubit>().increment(),
+                        ),
+                        const SizedBox(height: 4),
+                        FloatingActionButton(
+                          tooltip: 'Decrement',
+                          child: const Icon(Icons.remove),
+                          onPressed: () => context.read<CounterCubit>().decrement(),
+                        ),
+                      ],
+                    ),
                     MaterialButton(onPressed: (){
                       Navigator.of(context).pushNamed('/second');
                     },
